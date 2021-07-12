@@ -8,7 +8,7 @@ from pdf2image import convert_from_path
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/surface/Desktop/YouWe/OCR Project/fine-sublime-319610-dc80d5c6f639.json"
 
 
-PATH = 'C:/Users/surface/Desktop/YouWe/OCR Project/Images/13370636.pdf'
+PATH = 'C:/Users/surface/Desktop/YouWe/OCR Project/Images/PDFs/13370636.pdf'
 
 pages = convert_from_path(PATH, 501)
 client = vision.ImageAnnotatorClient()
@@ -20,10 +20,11 @@ for page in pages:
         content = image_file.read()
     image = vision.Image(content=content)
     response = client.document_text_detection(image=image)
-    print(response.text_annotations[0].description)
+    #print(response.text_annotations[0].description)
     responses.append(response.text_annotations[0].description)
-    Table = {'Text': responses}
-    df = pd.DataFrame(Table)
-    df.to_csv('responses.csv')
+    print(responses)
+Table = {'Text': responses}
+df = pd.DataFrame(Table)
+df.to_csv('responses.csv')
 
 
