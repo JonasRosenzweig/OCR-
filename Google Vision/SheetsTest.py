@@ -8,13 +8,13 @@ from google.auth.transport.requests import Request
 spreadsheet_id = '1kSZRodKeN1CyLzjgkvRaZIVHde6MkHs2swL7TEM-FE4'
 spreadsheet_range = 'Sheet1!A1:A1'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-oauth_token_path = 'C:/Users/surface/Desktop/YouWe/OCR/credentials.json'
+oauth_token_path = '/Google Vision/credentials.json'
 creds = None
 # The file token.pickle stores the user's access and refresh tokens, and is
 # created automatically when the authorization flow completes for the first
 # time.
-if os.path.exists('../../token.pickle'):
-    with open('../../token.pickle', 'rb') as token:
+if os.path.exists('../../../token.pickle'):
+    with open('../../../token.pickle', 'rb') as token:
         creds = pickle.load(token)
 # If there are no (valid) credentials available, let the user log in.
 if not creds or not creds.valid:
@@ -26,7 +26,7 @@ if not creds or not creds.valid:
             # '../receipt-parser-f50b734aa273.json', SCOPES)
         creds = flow.run_local_server(port=0)
     # Save the credentials for the next run
-    with open('../../token.pickle', 'wb') as token:
+    with open('../../../token.pickle', 'wb') as token:
         pickle.dump(creds, token)
 
 service = build('sheets', 'v4', credentials=creds)

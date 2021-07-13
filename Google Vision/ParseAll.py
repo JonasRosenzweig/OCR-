@@ -26,8 +26,8 @@ if __name__ == '__main__':
     # conf.read(args.settings)
     spreadsheet_id = '1kSZRodKeN1CyLzjgkvRaZIVHde6MkHs2swL7TEM-FE4'
     spreadsheet_range = 'Sheet1!A:L'
-    oauth_token_path = 'C:/Users/surface/Desktop/YouWe/OCR/credentials.json'
-    oauth_pickle_path = 'C:/Users/surface/Desktop/YouWe/OCR/credentials.pickle'
+    oauth_token_path = '/Google Vision/credentials.json'
+    oauth_pickle_path = '/Google Vision/credentials.pickle'
     receipts_base_path = 'C:/Users/surface/Desktop/YouWe/OCR Project/Images/PDFs'
     known_categories = dict()
     creds = None

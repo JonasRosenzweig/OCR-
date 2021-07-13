@@ -1,0 +1,9 @@
+*.json
+*.png
+*.pdf
+*.jpg
+*.jpeg
+*.conf
+*.ini
+*.pickle
+*.csv
