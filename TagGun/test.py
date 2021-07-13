@@ -1,5 +1,7 @@
 import requests
 from configparser import ConfigParser
+import os
+import json
 
 url = 'https://api.taggun.io/api/receipt/v1/verbose/file'
 
@@ -28,4 +30,8 @@ if __name__ == '__main__':
 
     response = requests.post(url, files=files, headers=headers)
 
-    print(response.content)
+    os.chdir('Responses')
+    output = open('output.json', 'w')
+    json.dump(response.json(), output, indent = 6)
+    output.close()
+
