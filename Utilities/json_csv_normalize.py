@@ -2,11 +2,14 @@ import pandas as pd
 import os, json
 from pathlib import Path
 
+
 TagGunJsonDir = r'C:\Users\surface\Desktop\YouWe\OCR\TagGun\Responses'
 GCVJsonDir = r'C:\Users\surface\Desktop\YouWe\OCR\Google Vision\Responses'
 file = r'C:\Users\surface\Desktop\YouWe\OCR\TagGun\Responses\output13370636.json'
 fileBB = r'C:\Users\surface\Desktop\YouWe\OCR\BilagsBerier\json\response_60627_100.json'
-path = Path(fileBB)
+fileBB1 = r'C:\Users\surface\Desktop\YouWe\OCR\BilagsBerier\json\response_60627_1_formatted.json'
+path = Path(fileBB1)
+
 
 def flattenjson(b, delim):
     val = {}
@@ -20,11 +23,12 @@ def flattenjson(b, delim):
 
     return val
 
+
 with path.open('r', encoding='utf-8') as file:
     data = json.loads(file.read())
     flattenjson(data, "_")
 
 df = pd.json_normalize(data)
 os.chdir(r'C:\Users\surface\Desktop\YouWe\OCR\Utilities\output')
-df.to_csv('testHuge.csv', index=False, encoding='utf-8')
+df.to_csv('testHuge1.csv', index=False, encoding='utf-8')
 
