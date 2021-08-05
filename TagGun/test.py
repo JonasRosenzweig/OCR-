@@ -19,7 +19,7 @@ if __name__ == '__main__':
     files = {
         'file': (
             'just_eat.png',  # set a filename for the file
-            open(r'C:\Users\surface\Desktop\YouWe\OCR\Receipts\just_eat.png', 'rb'),  # the actual file
+            open(r'C:\Users\surface\Desktop\YouWe\OCR\Receipts\13374263.jpg', 'rb'),  # the actual file
             'image/png'),  # content-type for the file
 
         # other optional parameters for Taggun API (eg: incognito, refresh, ipAddress, language)
@@ -31,7 +31,7 @@ if __name__ == '__main__':
     response = requests.post(url, files=files, headers=headers)
 
     os.chdir('Responses')
-    output = open('output.json', 'w')
+    output = open('output13374263.json', 'w')
     json.dump(response.json(), output, indent = 6)
     output.close()
 
