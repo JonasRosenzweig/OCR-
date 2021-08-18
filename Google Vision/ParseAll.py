@@ -9,6 +9,7 @@ import time
 import configparser
 import argparse
 
+# get credentials for parser
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/surface/Desktop/YouWe/OCR Project/fine-sublime-319610-dc80d5c6f639.json"
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 

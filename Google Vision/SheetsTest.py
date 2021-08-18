@@ -4,6 +4,7 @@ import pickle
 import os
 from google.auth.transport.requests import Request
 
+# editing Google sheets from receipt project
 
 spreadsheet_id = '1kSZRodKeN1CyLzjgkvRaZIVHde6MkHs2swL7TEM-FE4'
 spreadsheet_range = 'Sheet1!A1:A1'

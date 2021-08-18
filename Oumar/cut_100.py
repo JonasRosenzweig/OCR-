@@ -1,5 +1,7 @@
 import os
 
+# script to cut .txt file by lines (100)
+
 my_file = r'C:\Users\surface\Desktop\YouWe\OCR\Oumar\Extracted Data\Voucher_IDs_Full.txt'
 sorting = True
 hold_lines = []

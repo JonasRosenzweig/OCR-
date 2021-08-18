@@ -1,6 +1,8 @@
 import json, os
 from pathlib import Path
 
+# format Json for nice formatting
+
 file = r'C:\Users\surface\Desktop\YouWe\OCR\BilagsBerier\json\response_60627_100.json'
 path = Path(file)
 

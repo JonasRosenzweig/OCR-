@@ -6,6 +6,7 @@ import pandas as pd
 import json
 from pdf2image import convert_from_path
 
+# get credentials
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/surface/Desktop/YouWe/OCR Project/fine-sublime-319610-dc80d5c6f639.json"
 
 

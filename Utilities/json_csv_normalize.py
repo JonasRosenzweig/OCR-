@@ -2,6 +2,7 @@ import pandas as pd
 import os, json
 from pathlib import Path
 
+# attempt to normalize Json
 
 TagGunJsonDir = r'C:\Users\surface\Desktop\YouWe\OCR\TagGun\Responses'
 GCVJsonDir = r'C:\Users\surface\Desktop\YouWe\OCR\Google Vision\Responses'

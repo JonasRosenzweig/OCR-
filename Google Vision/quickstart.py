@@ -12,6 +12,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 SAMPLE_SPREADSHEET_ID = '1kSZRodKeN1CyLzjgkvRaZIVHde6MkHs2swL7TEM-FE4'
 SAMPLE_RANGE_NAME = 'Class Data!A2:E'
 
+# GCV quickstart
 def main():
     """Shows basic usage of the Sheets API.
     Prints values from a sample spreadsheet.

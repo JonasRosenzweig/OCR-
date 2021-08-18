@@ -7,6 +7,7 @@ import os
 import pickle
 
 # from https://github.com/lutzkuen/receipt-parser/blob/master/gcloud_parser/gcloud_parser.py
+# weird receipt prject
 
 SKIPWORDS = ['eur', 'stk', 'x']
 STOPWORDS = ['summe', 'visa', 'mwst', 'brutto', 'netto', 'zahlen', 'kreditkarte', 'ust-id-nr', 'rück geld']

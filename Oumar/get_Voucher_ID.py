@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+# extract Voucher IDs from .csv
 
 PATH = r'C:\Users\surface\Desktop\YouWe\OCR\Oumar\csv'
 SAVEPATH = r'C:\Users\surface\Desktop\YouWe\OCR\Oumar\Extracted Data'

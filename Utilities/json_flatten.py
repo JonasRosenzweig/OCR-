@@ -1,6 +1,7 @@
 import os, json
 from pathlib import Path
 
+# Flatten Json tree
 
 def flattenjson(b, delim):
     val = {}
