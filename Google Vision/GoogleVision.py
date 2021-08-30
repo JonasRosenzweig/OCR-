@@ -5,22 +5,25 @@ import os
 import pandas as pd
 import json
 from pdf2image import convert_from_path
+import PIL.Image
 
+PIL.Image.MAX_IMAGE_PIXELS = None
 
 # get credentials
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/surface/Desktop/YouWe/OCR Project/fine-sublime-319610-dc80d5c6f639.json"
-PATH = r'C:\Users\surface\Desktop\YouWe\OCR\BilagsBerier\pdf'
+PATH = r'C:\Users\surface\Desktop\YouWe\OCR\Oumar\xml-to-pdf\pdf'
 
 files = os.listdir(PATH)
 client = vision.ImageAnnotatorClient()
 
 
 for j in range(len(files)):
-    print(j+1,  'of', (len(files)), "files OCR'd.")
     file = os.listdir(PATH)[j]
+    print('OCRing', file)
     file_path = os.path.join('..', PATH, file)
     pages = convert_from_path(file_path, 501)
     responses = []
+
 
     for page in pages:
         page.save('tmp.jpg')
@@ -38,6 +41,7 @@ for j in range(len(files)):
     output = open('{}.txt'.format(file), 'w', encoding='UTF-8')
     output.writelines(responses)
     output.close()
+    print(j + 1, 'of', (len(files)), "files OCR'd. Last file:", file)
     j -= 1
 
 print("All files OCR'd.")
