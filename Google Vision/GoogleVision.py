@@ -38,7 +38,7 @@ for j in range(len(files)):
             i += 1
 
     os.chdir(r'C:\Users\surface\Desktop\YouWe\OCR\Google Vision\Responses')
-    output = open('{}.txt'.format(file), 'w', encoding='UTF-8')
+    output = open('{}.txt'.format(os.path.splitext(file)[0]), 'w', encoding='UTF-8')
     output.writelines(responses)
     output.close()
     print(j + 1, 'of', (len(files)), "files OCR'd. Last file:", file)

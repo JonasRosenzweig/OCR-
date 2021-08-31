@@ -12,7 +12,7 @@ for i in range(len(CSV_files)):
     df = pd.read_csv(file, index_col=0, skiprows=[0])
     df = df.transpose()
     os.chdir(Output)
-    df.to_csv('{}'.format(file), index=None, encoding='utf-16')
+    df.to_csv('{}'.format(file), index=None, encoding='utf-8')
 
 # os.chdir(CSV_PATH)
 # file = r'C:\Users\surface\Desktop\YouWe\OCR\Oumar\csv\Invoice.13370636.csv'
